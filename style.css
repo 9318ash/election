@@ -1,0 +1,618 @@
+
+/* =========================
+   기본 설정
+========================= */
+
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f5f7fb;
+    --text: #101828;
+    --muted: #667085;
+    --primary: #5267e8;
+    --dark: #101828;
+    --border: #e4e7ec;
+    --container: 1120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans KR",
+        sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+section {
+    scroll-margin-top: 84px;
+}
+
+/* =========================
+   상단 네비게이션
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(228, 231, 236, 0.8);
+    backdrop-filter: blur(16px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+}
+
+.logo-mark {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 11px;
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 10px 12px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 650;
+    white-space: nowrap;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link.active {
+    background: #eef0ff;
+    border-radius: 9px;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    background: var(--text);
+    border-radius: 2px;
+}
+
+/* =========================
+   메인 히어로
+========================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    color: white;
+    background: var(--dark);
+}
+
+.hero-glow {
+    position: absolute;
+    z-index: -1;
+    top: -200px;
+    right: -100px;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(
+        circle,
+        rgba(82, 103, 232, 0.4) 0%,
+        rgba(82, 103, 232, 0.08) 45%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 54px;
+}
+
+.eyebrow {
+    margin: 0 0 22px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.hero .eyebrow {
+    color: #aeb8ff;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.25;
+    letter-spacing: -2.5px;
+    font-weight: 850;
+}
+
+.hero h1 span {
+    color: #aeb8ff;
+}
+
+.hero-description {
+    margin: 26px 0 34px;
+    color: #c8cfdb;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 52px;
+    padding: 0 23px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 750;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.primary-button {
+    color: white;
+    background: var(--primary);
+}
+
+.primary-button:hover {
+    background: #687cf0;
+    transform: translateY(-2px);
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 90px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #98a2b3;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+/* =========================
+   비전 소개 띠
+========================= */
+
+.intro-strip {
+    background: #eef0ff;
+}
+
+.intro-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 105px;
+}
+
+.strip-label {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.intro-strip p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+/* =========================
+   공약 섹션
+========================= */
+
+.pledge-section {
+    padding: 115px 0;
+    background: var(--bg);
+}
+
+.section-alt {
+    background: var(--bg-alt);
+}
+
+.pledge-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.pledge-heading {
+    position: relative;
+}
+
+.pledge-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.pledge-number {
+    display: block;
+    margin-bottom: 14px;
+    color: #e6e9ff;
+    font-size: clamp(75px, 10vw, 120px);
+    font-weight: 900;
+    letter-spacing: -7px;
+    line-height: 1.1;
+}
+
+.pledge-heading h2 {
+    margin: 0 0 18px;
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 1.35;
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+}
+
+.pledge-summary {
+    max-width: 410px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.pledge-detail {
+    padding-top: 13px;
+}
+
+.detail-label {
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.pledge-detail h3 {
+    margin: 0 0 18px;
+    font-size: 25px;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+}
+
+.pledge-detail > p {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.detail-box {
+    display: flex;
+    gap: 18px;
+    margin-top: 35px;
+    padding: 24px;
+    background: #f6f7ff;
+    border: 1px solid #e9ebff;
+    border-radius: 16px;
+}
+
+.detail-box-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--primary);
+    background: white;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.detail-box h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.detail-box p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   마지막 메시지
+========================= */
+
+.closing-section {
+    padding: 110px 0;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(82, 103, 232, 0.32),
+            transparent 65%
+        ),
+        var(--dark);
+}
+
+.closing-content .eyebrow {
+    color: #aeb8ff;
+}
+
+.closing-content h2 {
+    margin: 0;
+    font-size: clamp(30px, 4.5vw, 48px);
+    line-height: 1.5;
+    letter-spacing: -1.5px;
+}
+
+.closing-content h2 span {
+    color: #aeb8ff;
+}
+
+.closing-content > p:not(.eyebrow) {
+    margin: 20px 0 32px;
+    color: #c8cfdb;
+    font-size: 14px;
+}
+
+.secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: white;
+}
+
+.secondary-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   푸터
+========================= */
+
+.footer {
+    padding: 25px 0;
+    background: #0b1220;
+    color: #98a2b3;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 11px;
+}
+
+.footer-inner span:first-child {
+    font-weight: 850;
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 14px 24px 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 24px rgba(16, 24, 40, 0.06);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 12px 14px;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .pledge-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .pledge-section {
+        padding: 80px 0;
+    }
+
+    .pledge-number {
+        font-size: 85px;
+    }
+
+    .intro-strip-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .logo {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+        padding-bottom: 32px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: -1.7px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-bottom {
+        margin-top: 65px;
+    }
+
+    .intro-strip p {
+        font-size: 15px;
+    }
+
+    .pledge-section {
+        padding: 65px 0;
+    }
+
+    .pledge-heading h2 {
+        font-size: 29px;
+    }
+
+    .pledge-detail h3 {
+        font-size: 22px;
+    }
+
+    .detail-box {
+        padding: 18px;
+    }
+
+    .closing-section {
+        padding: 80px 0;
+    }
+
+    .closing-content h2 {
+        font-size: 30px;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* 움직임 줄이기 설정을 사용하는 방문자 배려 */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
