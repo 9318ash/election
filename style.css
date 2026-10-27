@@ -4,10 +4,10 @@
 ======================================== */
 
 :root {
-    --primary: #39d6b4;
-    --primary-light: #75f0d4;
-    --primary-hover: #58e4c5;
-    --primary-dark: #168c76;
+    --primary: #12B6CF;
+    --primary-light: #65D9E8;
+    --primary-hover: #35C8DD;
+    --primary-dark: #087F95;
 
     --bg: #101828;
     --bg-light: #152234;
@@ -203,7 +203,7 @@ img {
     background:
         radial-gradient(
             ellipse at 80% 30%,
-            rgba(57, 214, 180, 0.08),
+            rgba(18, 182, 207, 0.08),
             transparent 45%
         ),
         var(--bg);
@@ -221,8 +221,8 @@ img {
 
     background: radial-gradient(
         circle,
-        rgba(57, 214, 180, 0.12) 0%,
-        rgba(57, 214, 180, 0.04) 42%,
+        rgba(18, 182, 207, 0.12) 0%,
+        rgba(18, 182, 207, 0.04) 42%,
         transparent 72%
     );
 
@@ -230,7 +230,7 @@ img {
     pointer-events: none;
 }
 
-/* PC에서 왼쪽 콘텐츠와 오른쪽 사진을 배치 */
+/* PC: 왼쪽 콘텐츠와 오른쪽 사진 */
 .hero-layout {
     position: relative;
     z-index: 1;
@@ -323,7 +323,7 @@ img {
     background: var(--primary-hover);
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 30px rgba(57, 214, 180, 0.18);
+    box-shadow: 0 10px 30px rgba(18, 182, 207, 0.2);
 }
 
 .primary-button span {
@@ -389,7 +389,7 @@ img {
     border-radius: 18px;
 }
 
-/* 사진 밑에 들어가는 줄글 */
+/* 사진 아래 설명문 */
 .hero-photo-description {
     width: 100%;
     margin: 0;
@@ -552,8 +552,8 @@ img {
 
     padding: 25px;
 
-    background: rgba(57, 214, 180, 0.07);
-    border: 1px solid rgba(57, 214, 180, 0.17);
+    background: rgba(18, 182, 207, 0.07);
+    border: 1px solid rgba(18, 182, 207, 0.2);
     border-radius: 14px;
 }
 
@@ -565,7 +565,7 @@ img {
     height: 42px;
     flex-shrink: 0;
 
-    color: #102a27;
+    color: #101828;
     background: var(--primary);
 
     border-radius: 10px;
@@ -605,7 +605,7 @@ img {
     background:
         radial-gradient(
             ellipse at 50% 100%,
-            rgba(57, 214, 180, 0.11),
+            rgba(18, 182, 207, 0.11),
             transparent 65%
         ),
         #0c1422;
@@ -660,7 +660,7 @@ img {
     color: var(--primary-light);
     background: transparent;
 
-    border: 1px solid rgba(117, 240, 212, 0.4);
+    border: 1px solid rgba(101, 217, 232, 0.4);
     border-radius: 9px;
 
     font-size: 13px;
@@ -672,7 +672,7 @@ img {
 }
 
 .secondary-button:hover {
-    background: rgba(57, 214, 180, 0.08);
+    background: rgba(18, 182, 207, 0.08);
     border-color: var(--primary);
 }
 
@@ -869,12 +869,12 @@ img {
         line-height: 1.9;
     }
 
-    /* PC용 사진은 모바일에서 감춤 */
+    /* PC용 사진은 모바일에서 숨김 */
     .hero-layout .hero-visual-desktop {
         display: none;
     }
 
-    /* 모바일용 사진을 소개 문구와 버튼 사이에 배치 */
+    /* 모바일용 사진: 소개 문구와 버튼 사이 */
     .hero-layout .hero-content > .hero-visual {
         display: flex;
 
