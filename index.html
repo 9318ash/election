@@ -1,227 +1,64 @@
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101828">
+<!-- 메인 소개 -->
+<section class="hero" id="home">
+    <div class="hero-glow"></div>
 
-    <title>우리의 약속 | 후보자 공약 소개</title>
-    <meta
-        name="description"
-        content="더 나은 학교를 만들기 위한 후보자의 공약을 소개합니다."
-    >
+    <div class="container hero-layout">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
+        <!-- 왼쪽: 제목, 소개 문구, 버튼 -->
+        <div class="hero-content">
+            <p class="eyebrow">
+                KIS에 불어오는 개혁의 바람
+            </p>
 
-    <!-- 상단 네비게이션 -->
-    <header class="header">
-        <nav class="navbar container" aria-label="공약 메뉴">
-            <a href="#home" class="logo">
-                <span class="logo-mark">ㅗ</span>
-                <span>2027학년도 학생회장단 고등부회장 후보자 이민재</span>
-            </a>
+            <h1>
+                <span>모두에게 열린</span><br>
+                KIS를 만들겠습니다.
+            </h1>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="메뉴 열기"
-                aria-expanded="false"
-                aria-controls="navMenu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <p class="hero-description">
+                대충어쩌고저쩌고<br>
+                두줄까지ㄱㄴ.
+            </p>
 
-            <div class="nav-menu" id="navMenu">
-                <a href="#pledge1" class="nav-link">공약 01</a>
-                <a href="#pledge2" class="nav-link">공약 02</a>
-                <a href="#pledge3" class="nav-link">공약 03</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- 메인 소개 -->
-        <section class="hero" id="home">
-            <div class="hero-glow"></div>
-
-            <!-- 오른쪽 메인 이미지 -->
+            <!-- 사진과 설명문: 모바일에서는 버튼 위로 이동 -->
             <div class="hero-visual">
                 <img
                     src="./picture.png"
                     alt="학교 선거 홍보 이미지"
                 >
-            </div>
 
-            <!-- 왼쪽 제목 및 소개 -->
-            <div class="container hero-content">
-                <p class="eyebrow">
-                    KIS에 불어오는 개혁의 바람
-                </p>
-
-                <h1>
-                    <span>모두에게 열린</span><br>
-                    KIS를 만들겠습니다.
-                </h1>
-
-                <p class="hero-description">
-                    대충어쩌고저쩌고<br>
-                    두줄까지ㄱㄴ.
-                </p>
-
-                <a href="#pledge1" class="primary-button">
-                    공약 살펴보기
-                    <span aria-hidden="true">↓</span>
-                </a>
-
-                <div class="hero-bottom">
-                    <span></span>
-                    <span>01 — 03</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 공약 소개 공통 안내 -->
-        <section class="intro-strip">
-            <div class="container intro-strip-inner">
-                <span class="strip-label">OUR VISION</span>
-                <p>
-                    비전
+                <p class="hero-photo-description">
+                    이곳에 사진 아래 들어갈 소개 글을 작성하세요.
+                    후보자로서 추구하는 가치와 학교를 어떻게
+                    변화시키고 싶은지 자유롭게 설명하면 됩니다.
                 </p>
             </div>
-        </section>
 
-        <!-- 공약 1 -->
-        <section class="pledge-section" id="pledge1">
-            <div class="container pledge-grid">
-                <div class="pledge-heading">
-                    <p class="eyebrow">PLEDGE 01</p>
-                    <span class="pledge-number">01</span>
-                    <h2>첫 번째 공약 제목</h2>
-                    <p class="pledge-summary">
-                        이곳에 첫 번째 공약의 핵심 내용을
-                        한두 문장으로 작성하세요.
-                    </p>
-                </div>
+            <a href="#pledge1" class="primary-button">
+                공약 살펴보기
+                <span aria-hidden="true">↓</span>
+            </a>
 
-                <div class="pledge-detail">
-                    <div class="detail-label">THE PROMISE</div>
-                    <h3>어떤 변화를 만들까요?</h3>
-                    <p>
-                        이곳에 공약을 구체적으로 설명하세요.
-                        왜 이 공약이 필요한지, 어떤 방식으로
-                        실행할 것인지, 학생들에게 어떤 도움이
-                        되는지를 작성하면 좋습니다.
-                    </p>
-
-                    <div class="detail-box">
-                        <span class="detail-box-icon">01</span>
-                        <div>
-                            <h4>기대 효과</h4>
-                            <p>공약이 실현되었을 때 기대되는 변화를 작성하세요.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-bottom">
+                <span></span>
+                <span>01 — 03</span>
             </div>
-        </section>
-
-        <!-- 공약 2 -->
-        <section class="pledge-section section-alt" id="pledge2">
-            <div class="container pledge-grid">
-                <div class="pledge-heading">
-                    <p class="eyebrow">PLEDGE 02</p>
-                    <span class="pledge-number">02</span>
-                    <h2>두 번째 공약 제목</h2>
-                    <p class="pledge-summary">
-                        두 번째 공약의 핵심 내용을 간결하게 소개하세요.
-                    </p>
-                </div>
-
-                <div class="pledge-detail">
-                    <div class="detail-label">THE PROMISE</div>
-                    <h3>구체적인 실행 계획</h3>
-                    <p>
-                        두 번째 공약의 내용과 실행 계획을 작성하세요.
-                        실현 가능한 방법과 필요한 절차를 설명하면
-                        공약에 대한 신뢰도를 높일 수 있습니다.
-                    </p>
-
-                    <div class="detail-box">
-                        <span class="detail-box-icon">02</span>
-                        <div>
-                            <h4>기대 효과</h4>
-                            <p>학생들이 실제로 체감할 수 있는 효과를 작성하세요.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 공약 3 -->
-        <section class="pledge-section" id="pledge3">
-            <div class="container pledge-grid">
-                <div class="pledge-heading">
-                    <p class="eyebrow">PLEDGE 03</p>
-                    <span class="pledge-number">03</span>
-                    <h2>세 번째 공약 제목</h2>
-                    <p class="pledge-summary">
-                        세 번째 공약의 핵심 메시지를 입력하세요.
-                    </p>
-                </div>
-
-                <div class="pledge-detail">
-                    <div class="detail-label">THE PROMISE</div>
-                    <h3>학생의 일상을 바꾸는 방법</h3>
-                    <p>
-                        이 공약을 통해 해결하고 싶은 문제와
-                        구체적인 추진 방안을 설명하세요.
-                        필요하다면 실제 사례도 추가할 수 있습니다.
-                    </p>
-
-                    <div class="detail-box">
-                        <span class="detail-box-icon">03</span>
-                        <div>
-                            <h4>기대 효과</h4>
-                            <p>예상되는 긍정적인 변화를 작성하세요.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 마지막 메시지 -->
-        <section class="closing-section">
-            <div class="container closing-content">
-                <p class="eyebrow">OUR FUTURE</p>
-
-                <h2>
-                    다시,<br>
-                    <span>슬로건?maybe.</span>
-                </h2>
-
-                <p>
-                    어나더 메세지.
-                </p>
-
-                <a href="#home" class="secondary-button">
-                    맨 위로 돌아가기 ↑
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-inner">
-            <span>.</span>
-            <span>.</span>
         </div>
-    </footer>
 
-</body>
-</html>
+        <!-- PC에서는 오른쪽에 배치할 사진 영역 -->
+        <div class="hero-visual hero-visual-desktop">
+            <img
+                src="./picture.png"
+                alt="학교 선거 홍보 이미지"
+            >
+
+            <p class="hero-photo-description">
+                이곳에 사진 아래 들어갈 소개 글을 작성하세요.
+                후보자로서 추구하는 가치와 학교를 어떻게
+                변화시키고 싶은지 자유롭게 설명하면 됩니다.
+            </p>
+        </div>
+
+    </div>
+</section>
