@@ -165,6 +165,8 @@ section {
     background: var(--dark);
 }
 
+/* 기존 배경의 푸른빛 */
+
 .hero-glow {
     position: absolute;
     z-index: -1;
@@ -181,7 +183,48 @@ section {
     pointer-events: none;
 }
 
+/* 오른쪽 이미지 */
+
+.hero-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 이미지 왼쪽에 어두운 그라데이션 */
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        #101828 0%,
+        rgba(16, 24, 40, 0.75) 12%,
+        rgba(16, 24, 40, 0.12) 65%,
+        rgba(16, 24, 40, 0.08) 100%
+    );
+    pointer-events: none;
+}
+
+/* 제목과 버튼을 이미지 앞에 배치 */
+
 .hero-content {
+    position: relative;
+    z-index: 1;
     padding-top: 70px;
     padding-bottom: 54px;
 }
@@ -199,6 +242,7 @@ section {
 }
 
 .hero h1 {
+    max-width: 900px;
     margin: 0;
     font-size: clamp(38px, 6vw, 68px);
     line-height: 1.25;
@@ -473,7 +517,7 @@ section {
 }
 
 /* =========================
-   모바일
+   태블릿
 ========================= */
 
 @media (max-width: 900px) {
@@ -512,6 +556,14 @@ section {
         min-height: 590px;
     }
 
+    .hero-visual {
+        width: 55%;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+    }
+
     .pledge-grid {
         grid-template-columns: 1fr;
         gap: 42px;
@@ -535,6 +587,10 @@ section {
     }
 }
 
+/* =========================
+   모바일
+========================= */
+
 @media (max-width: 520px) {
     .container {
         width: calc(100% - 36px);
@@ -552,6 +608,25 @@ section {
     .hero-content {
         padding-top: 60px;
         padding-bottom: 32px;
+    }
+
+    /* 모바일에서는 이미지가 배경처럼 보이게 처리 */
+    .hero-visual {
+        width: 100%;
+        opacity: 0.35;
+    }
+
+    .hero-visual img {
+        object-position: center;
+    }
+
+    .hero-visual::after {
+        background: linear-gradient(
+            to bottom,
+            rgba(16, 24, 40, 0.3) 0%,
+            rgba(16, 24, 40, 0.55) 45%,
+            #101828 95%
+        );
     }
 
     .hero h1 {
@@ -602,7 +677,9 @@ section {
     }
 }
 
-/* 움직임 줄이기 설정을 사용하는 방문자 배려 */
+/* =========================
+   움직임 줄이기 설정을 사용하는 방문자 배려
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
     html {
