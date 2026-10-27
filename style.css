@@ -69,7 +69,7 @@ section {
     top: 0;
     z-index: 100;
     background: rgba(255, 255, 255, 0.94);
-    border-bottom: 1px solid rgba(228, 231, 236, 0.8);
+    border-bottom: 1px solid rgba(220, 233, 229, 0.8);
     backdrop-filter: blur(16px);
 }
 
@@ -96,7 +96,7 @@ section {
     place-items: center;
     width: 34px;
     height: 34px;
-    color: #fff;
+    color: #101828;
     background: var(--primary);
     border-radius: 11px;
     font-size: 17px;
@@ -123,7 +123,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary);
+    color: #168c76;
 }
 
 .nav-link.active {
@@ -165,7 +165,7 @@ section {
     background: var(--dark);
 }
 
-/* 기존 배경의 푸른빛 */
+/* 민트색 배경 효과 */
 
 .hero-glow {
     position: absolute;
@@ -177,7 +177,7 @@ section {
     background: radial-gradient(
         circle,
         rgba(57, 214, 180, 0.3) 0%,
-        rgba(82, 103, 232, 0.08) 45%,
+        rgba(57, 214, 180, 0.08) 45%,
         transparent 70%
     );
     pointer-events: none;
@@ -204,7 +204,7 @@ section {
     object-position: center;
 }
 
-/* 이미지 왼쪽에 어두운 그라데이션 */
+/* 이미지 왼쪽 그라데이션 */
 
 .hero-visual::after {
     content: "";
@@ -220,7 +220,7 @@ section {
     pointer-events: none;
 }
 
-/* 제목과 버튼을 이미지 앞에 배치 */
+/* 제목과 버튼 */
 
 .hero-content {
     position: relative;
@@ -231,7 +231,7 @@ section {
 
 .eyebrow {
     margin: 0 0 22px;
-    color: var(--primary);
+    color: #168c76;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 2.5px;
@@ -278,12 +278,13 @@ section {
 }
 
 .primary-button {
-    color: white;
+    color: #101828;
     background: var(--primary);
 }
 
 .primary-button:hover {
-    background: #687cf0;
+    background: #58e4c5;
+    color: #101828;
     transform: translateY(-2px);
 }
 
@@ -317,7 +318,7 @@ section {
 }
 
 .strip-label {
-    color: var(--primary);
+    color: #168c76;
     font-size: 11px;
     font-weight: 850;
     letter-spacing: 2px;
@@ -390,7 +391,7 @@ section {
 
 .detail-label {
     margin-bottom: 18px;
-    color: var(--primary);
+    color: #168c76;
     font-size: 11px;
     font-weight: 850;
     letter-spacing: 2px;
@@ -426,7 +427,7 @@ section {
     place-items: center;
     width: 42px;
     height: 42px;
-    color: var(--primary);
+    color: #168c76;
     background: white;
     border-radius: 12px;
     font-size: 13px;
@@ -463,7 +464,7 @@ section {
 }
 
 .closing-content .eyebrow {
-    color: #;
+    color: #75f0d4;
 }
 
 .closing-content h2 {
@@ -474,7 +475,7 @@ section {
 }
 
 .closing-content h2 span {
-    color: #;
+    color: #75f0d4;
 }
 
 .closing-content > p:not(.eyebrow) {
@@ -484,12 +485,12 @@ section {
 }
 
 .secondary-button {
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    color: white;
+    border: 1px solid rgba(117, 240, 212, 0.55);
+    color: #75f0d4;
 }
 
 .secondary-button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(57, 214, 180, 0.12);
     transform: translateY(-2px);
 }
 
@@ -610,7 +611,6 @@ section {
         padding-bottom: 32px;
     }
 
-    /* 모바일에서는 이미지가 배경처럼 보이게 처리 */
     .hero-visual {
         width: 100%;
         opacity: 0.35;
