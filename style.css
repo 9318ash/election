@@ -5,12 +5,12 @@
 
 :root {
     --bg: #ffffff;
-    --bg-alt: #f5f7fb;
+    --bg-alt: #f5f9f8;
     --text: #101828;
     --muted: #667085;
-    --primary: #5267e8;
+    --primary: #39d6b4;
     --dark: #101828;
-    --border: #e4e7ec;
+    --border: #dce9e5;
     --container: 1120px;
 }
 
@@ -127,7 +127,7 @@ section {
 }
 
 .nav-link.active {
-    background: #eef0ff;
+    background: #d9fbf2;
     border-radius: 9px;
 }
 
@@ -176,7 +176,7 @@ section {
     height: 650px;
     background: radial-gradient(
         circle,
-        rgba(82, 103, 232, 0.4) 0%,
+        rgba(57, 214, 180, 0.3) 0%,
         rgba(82, 103, 232, 0.08) 45%,
         transparent 70%
     );
@@ -238,7 +238,7 @@ section {
 }
 
 .hero .eyebrow {
-    color: #aeb8ff;
+    color: #75f0d4;
 }
 
 .hero h1 {
@@ -251,7 +251,7 @@ section {
 }
 
 .hero h1 span {
-    color: #aeb8ff;
+    color: #75f0d4;
 }
 
 .hero-description {
@@ -305,7 +305,7 @@ section {
 ========================= */
 
 .intro-strip {
-    background: #eef0ff;
+    background: #d9fbf2;
 }
 
 .intro-strip-inner {
@@ -361,7 +361,7 @@ section {
 .pledge-number {
     display: block;
     margin-bottom: 14px;
-    color: #e6e9ff;
+    color: #d5f7ee;
     font-size: clamp(75px, 10vw, 120px);
     font-weight: 900;
     letter-spacing: -7px;
@@ -415,8 +415,8 @@ section {
     gap: 18px;
     margin-top: 35px;
     padding: 24px;
-    background: #f6f7ff;
-    border: 1px solid #e9ebff;
+    background: #effbf7;
+    border: 1px solid #c9f3e8;
     border-radius: 16px;
 }
 
@@ -456,14 +456,14 @@ section {
     background:
         radial-gradient(
             ellipse at 50% 0%,
-            rgba(82, 103, 232, 0.32),
+            rgba(57, 214, 180, 0.25),
             transparent 65%
         ),
         var(--dark);
 }
 
 .closing-content .eyebrow {
-    color: #aeb8ff;
+    color: #;
 }
 
 .closing-content h2 {
@@ -474,7 +474,7 @@ section {
 }
 
 .closing-content h2 span {
-    color: #aeb8ff;
+    color: #;
 }
 
 .closing-content > p:not(.eyebrow) {
