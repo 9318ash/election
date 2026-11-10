@@ -94,3 +94,1235 @@ img {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--bg);
+    background: var(--primary);
+    border-radius: 10px;
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 8px 0;
+
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-light);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+
+    background: currentColor;
+    border-radius: 2px;
+}
+
+
+/* ========================================
+   3. 메인 소개 영역
+======================================== */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            ellipse at 80% 30%,
+            rgba(18, 182, 207, 0.08),
+            transparent 45%
+        ),
+        var(--bg);
+}
+
+.hero-glow {
+    position: absolute;
+    z-index: -1;
+
+    top: 5%;
+    right: -10%;
+
+    width: 650px;
+    height: 650px;
+
+    background: radial-gradient(
+        circle,
+        rgba(18, 182, 207, 0.12) 0%,
+        rgba(18, 182, 207, 0.04) 42%,
+        transparent 72%
+    );
+
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* PC: 왼쪽 콘텐츠와 오른쪽 사진 */
+.hero-layout {
+    position: relative;
+    z-index: 1;
+
+    min-height: 680px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* 왼쪽 소개 콘텐츠 */
+.hero-layout .hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    padding: 0;
+}
+
+.eyebrow {
+    margin-bottom: 22px;
+
+    color: var(--primary-light);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin-bottom: 26px;
+
+    font-size: clamp(38px, 4.5vw, 66px);
+    font-weight: 850;
+    line-height: 1.25;
+    letter-spacing: -2.5px;
+
+    word-break: keep-all;
+}
+
+.hero h1 span {
+    color: var(--primary-light);
+}
+
+.hero-description {
+    max-width: 470px;
+    margin-bottom: 32px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+/* 공약 살펴보기 버튼 */
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    min-height: 54px;
+    padding: 0 25px;
+
+    color: #101828;
+    background: var(--primary);
+
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(18, 182, 207, 0.2);
+}
+
+.primary-button span {
+    font-size: 18px;
+}
+
+/* 메인 영역 하단 표시 */
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 65px;
+
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero-bottom span:first-child {
+    display: block;
+    width: 42px;
+    height: 1px;
+
+    background: var(--primary);
+}
+
+
+/* ========================================
+   4. 사진과 사진 아래 설명문
+======================================== */
+
+/* PC용 사진 영역 */
+.hero-layout .hero-visual-desktop {
+    display: flex;
+}
+
+.hero-layout .hero-visual {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* 이미지 */
+.hero-layout .hero-visual img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 18px;
+}
+
+/* 사진 아래 설명문 */
+.hero-photo-description {
+    width: 100%;
+    margin: 0;
+    padding: 0 4px;
+
+    color: #c5d6d4;
+
+    font-size: 15px;
+    line-height: 1.9;
+    letter-spacing: -0.2px;
+
+    text-align: left;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* 모바일용 사진은 PC에서 숨김 */
+.hero-layout .hero-content > .hero-visual {
+    display: none;
+}
+
+
+/* ========================================
+   5. 공약 안내 띠 영역
+======================================== */
+
+.intro-strip {
+    position: relative;
+
+    background: var(--primary);
+    color: #102a27;
+}
+
+.intro-strip-inner {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.strip-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+.intro-strip-inner p {
+    font-size: 17px;
+    font-weight: 800;
+    word-break: keep-all;
+}
+
+
+/* ========================================
+   6. 공약 공통 영역
+======================================== */
+
+.pledge-section {
+    position: relative;
+    padding: 125px 0;
+
+    background: var(--bg);
+}
+
+.section-alt {
+    background: var(--bg-light);
+}
+
+.pledge-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 90px;
+}
+
+.pledge-heading {
+    position: relative;
+}
+
+.pledge-heading .eyebrow {
+    margin-bottom: 24px;
+}
+
+.pledge-number {
+    display: block;
+    margin-bottom: 14px;
+
+    color: var(--primary);
+
+    font-size: clamp(66px, 8vw, 100px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -5px;
+}
+
+.pledge-heading h2 {
+    margin-bottom: 22px;
+
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 850;
+    line-height: 1.35;
+    letter-spacing: -1.5px;
+
+    word-break: keep-all;
+}
+
+.pledge-summary {
+    max-width: 440px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+/* 공약 상세 설명 */
+.pledge-detail {
+    padding-top: 12px;
+}
+
+.detail-label {
+    margin-bottom: 20px;
+
+    color: var(--primary-light);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pledge-detail h3 {
+    margin-bottom: 20px;
+
+    font-size: clamp(23px, 2.5vw, 32px);
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+
+    word-break: keep-all;
+}
+
+.pledge-detail > p {
+    margin-bottom: 30px;
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+    line-height: 2;
+    word-break: keep-all;
+}
+
+/* 공약 기대 효과 박스 */
+.detail-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 25px;
+
+    background: rgba(18, 182, 207, 0.07);
+    border: 1px solid rgba(18, 182, 207, 0.2);
+    border-radius: 14px;
+}
+
+.detail-box-icon {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    color: #101828;
+    background: var(--primary);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.detail-box h4 {
+    margin-bottom: 8px;
+
+    color: var(--primary-light);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.detail-box p {
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+
+/* ========================================
+   7. 마지막 메시지
+======================================== */
+
+.closing-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 130px 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(18, 182, 207, 0.11),
+            transparent 65%
+        ),
+        #0c1422;
+
+    border-top: 1px solid var(--border);
+}
+
+.closing-content {
+    position: relative;
+    z-index: 1;
+}
+
+.closing-content .eyebrow {
+    margin-bottom: 28px;
+    color: var(--primary-light);
+}
+
+.closing-content h2 {
+    margin-bottom: 28px;
+
+    font-size: clamp(42px, 7vw, 82px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -3px;
+
+    word-break: keep-all;
+}
+
+.closing-content h2 span {
+    color: var(--primary-light);
+}
+
+.closing-content > p:not(.eyebrow) {
+    max-width: 550px;
+    margin-bottom: 35px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 20px;
+
+    color: var(--primary-light);
+    background: transparent;
+
+    border: 1px solid rgba(101, 217, 232, 0.4);
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    background: rgba(18, 182, 207, 0.08);
+    border-color: var(--primary);
+}
+
+
+/* ========================================
+   8. 푸터
+======================================== */
+
+.footer {
+    background: #0a111d;
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: #718096;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   9. 태블릿 대응
+======================================== */
+
+@media (max-width: 1024px) {
+    .container {
+        width: calc(100% - 56px);
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-layout {
+        min-height: 620px;
+        gap: 32px;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 4.5vw, 52px);
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-layout .hero-visual img {
+        max-height: 380px;
+    }
+
+    .hero-photo-description {
+        font-size: 14px;
+    }
+
+    .pledge-grid {
+        gap: 55px;
+    }
+
+    .pledge-section {
+        padding: 100px 0;
+    }
+}
+
+
+/* ========================================
+   10. 모바일 대응
+======================================== */
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    /* 네비게이션 */
+    .navbar {
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .logo {
+        gap: 9px;
+        max-width: calc(100% - 55px);
+
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        width: 100%;
+        padding: 10px 20px 16px;
+
+        background: rgba(16, 24, 40, 0.98);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 14px 4px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* 메인 영역 */
+    .hero {
+        min-height: auto;
+        display: block;
+    }
+
+    .hero-glow {
+        top: 0;
+        right: -45%;
+
+        width: 420px;
+        height: 420px;
+    }
+
+    .hero-layout {
+        min-height: auto;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+
+        padding-top: 55px;
+        padding-bottom: 48px;
+    }
+
+    .hero-layout .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero .eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        margin-bottom: 20px;
+
+        font-size: clamp(34px, 8vw, 48px);
+        line-height: 1.32;
+        letter-spacing: -1.7px;
+    }
+
+    .hero-description {
+        margin-bottom: 0;
+
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    /* PC용 사진은 모바일에서 숨김 */
+    .hero-layout .hero-visual-desktop {
+        display: none;
+    }
+
+    /* 모바일용 사진: 소개 문구와 버튼 사이 */
+    .hero-layout .hero-content > .hero-visual {
+        display: flex;
+
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin: 26px auto 28px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 13px;
+    }
+
+    .hero-layout .hero-visual img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+
+        object-fit: contain;
+        object-position: center;
+
+        border-radius: 14px;
+    }
+
+    .hero-photo-description {
+        padding: 0 2px;
+
+        color: #c5d6d4;
+
+        font-size: 13px;
+        line-height: 1.85;
+        text-align: left;
+        word-break: keep-all;
+    }
+
+    .hero-layout .primary-button {
+        min-height: 50px;
+        padding: 0 20px;
+
+        gap: 18px;
+        font-size: 13px;
+    }
+
+    .hero-bottom {
+        margin-top: 35px;
+    }
+
+    /* 공약 안내 띠 */
+    .intro-strip-inner {
+        min-height: 82px;
+        gap: 15px;
+    }
+
+    .strip-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .intro-strip-inner p {
+        font-size: 14px;
+        text-align: right;
+    }
+
+    /* 공약 영역 */
+    .pledge-section {
+        padding: 75px 0;
+    }
+
+    .pledge-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+
+    .pledge-heading .eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .pledge-number {
+        margin-bottom: 12px;
+
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .pledge-heading h2 {
+        margin-bottom: 16px;
+
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .pledge-summary {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .pledge-detail {
+        padding-top: 0;
+    }
+
+    .detail-label {
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .pledge-detail h3 {
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+
+    .pledge-detail > p {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .detail-box {
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .detail-box-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .detail-box h4 {
+        font-size: 14px;
+    }
+
+    .detail-box p {
+        font-size: 13px;
+    }
+
+    /* 마지막 메시지 */
+    .closing-section {
+        padding: 85px 0;
+    }
+
+    .closing-content .eyebrow {
+        margin-bottom: 22px;
+    }
+
+    .closing-content h2 {
+        margin-bottom: 22px;
+
+        font-size: clamp(40px, 10vw, 60px);
+        letter-spacing: -2px;
+    }
+
+    .closing-content > p:not(.eyebrow) {
+        margin-bottom: 28px;
+        font-size: 14px;
+    }
+
+    .secondary-button {
+        min-height: 46px;
+        font-size: 12px;
+    }
+
+    /* 푸터 */
+    .footer-inner {
+        min-height: 65px;
+        font-size: 10px;
+    }
+}
+
+
+/* ========================================
+   11. 작은 모바일 화면
+======================================== */
+
+@media (max-width: 420px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .logo {
+        font-size: 10px;
+    }
+
+    .hero-layout {
+        padding-top: 42px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-layout .hero-content > .hero-visual {
+        margin-top: 22px;
+        margin-bottom: 24px;
+    }
+
+    .hero-layout .hero-visual img {
+        max-height: 260px;
+    }
+
+    .hero-photo-description {
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .pledge-section {
+        padding: 62px 0;
+    }
+
+    .pledge-heading h2 {
+        font-size: 27px;
+    }
+
+    .detail-box {
+        padding: 16px;
+    }
+
+    .closing-section {
+        padding: 70px 0;
+    }
+}
+
+
+/* ========================================
+   12. 모션 최소화 설정
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   13. 밝은 테마 오버라이드
+   기존 레이아웃과 반응형 설정은 유지하고
+   색상만 밝은 테마로 변경합니다.
+======================================== */
+
+:root {
+    --primary: #12B6CF;
+    --primary-light: #65D9E8;
+    --primary-hover: #35C8DD;
+    --primary-dark: #087F95;
+
+    --bg: #F5FAFC;
+    --bg-light: #EAF5F8;
+    --bg-card: #FFFFFF;
+
+    --text: #203447;
+    --text-muted: #637987;
+    --border: rgba(32, 52, 71, 0.12);
+}
+
+/* 전체 */
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* 상단 네비게이션 */
+.header {
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo-mark {
+    color: #FFFFFF;
+    background: var(--primary-dark);
+}
+
+.nav-link {
+    color: var(--text-muted);
+}
+
+.nav-link:hover {
+    color: var(--primary-dark);
+}
+
+.menu-toggle {
+    color: var(--text);
+    background: #FFFFFF;
+    border-color: var(--border);
+}
+
+/* 메인 소개 영역 */
+.hero {
+    background:
+        radial-gradient(
+            ellipse at 80% 30%,
+            rgba(18, 182, 207, 0.13),
+            transparent 55%
+        ),
+        var(--bg);
+}
+
+.hero-glow {
+    background: radial-gradient(
+        circle,
+        rgba(18, 182, 207, 0.16) 0%,
+        rgba(18, 182, 207, 0.06) 42%,
+        transparent 72%
+    );
+}
+
+.eyebrow {
+    color: var(--primary-dark);
+}
+
+.hero h1 span {
+    color: var(--primary-dark);
+}
+
+.hero-description,
+.hero-photo-description {
+    color: var(--text-muted);
+}
+
+/* 메인 버튼 */
+.primary-button {
+    color: #FFFFFF;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.primary-button:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(18, 182, 207, 0.20);
+}
+
+/* 공약 안내 띠 */
+.intro-strip {
+    background: #DDF4F8;
+    color: #203F4C;
+}
+
+/* 공약 영역 */
+.pledge-section {
+    background: #FFFFFF;
+}
+
+.section-alt {
+    background: #F0F8FA;
+}
+
+.pledge-number {
+    color: var(--primary);
+}
+
+.pledge-summary,
+.pledge-detail > p {
+    color: var(--text-muted);
+}
+
+.detail-label {
+    color: var(--primary-dark);
+}
+
+/* 기대 효과 박스 */
+.detail-box {
+    background: #EAF8FA;
+    border: 1px solid rgba(18, 182, 207, 0.25);
+}
+
+.detail-box-icon {
+    color: #FFFFFF;
+    background: var(--primary-dark);
+}
+
+.detail-box h4 {
+    color: var(--primary-dark);
+}
+
+.detail-box p {
+    color: var(--text-muted);
+}
+
+/* 마지막 메시지 */
+.closing-section {
+    background:
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(18, 182, 207, 0.15),
+            transparent 65%
+        ),
+        #EAF5F8;
+    border-top: 1px solid var(--border);
+}
+
+.closing-content .eyebrow,
+.closing-content h2 span {
+    color: var(--primary-dark);
+}
+
+.closing-content > p:not(.eyebrow) {
+    color: var(--text-muted);
+}
+
+.secondary-button {
+    color: var(--primary-dark);
+    border-color: rgba(8, 127, 149, 0.4);
+}
+
+.secondary-button:hover {
+    background: rgba(18, 182, 207, 0.10);
+    border-color: var(--primary);
+}
+
+/* 푸터 */
+.footer {
+    background: #DFEEF2;
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    color: #637987;
+}
+
+/* 모바일 메뉴 */
+@media (max-width: 768px) {
+    .nav-menu {
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-link {
+        color: var(--text);
+        border-bottom-color: var(--border);
+    }
+
+    .nav-link:hover {
+        color: var(--primary-dark);
+    }
+}
