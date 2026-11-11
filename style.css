@@ -6,7 +6,7 @@
     --primary: #12B6CF;
     --primary-light: #65D9E8;
     --primary-hover: #35C8DD;
-    --primary-dark: #087F95;
+    --primary-dark: #12B6CF; /* 기존 #087F95에서 #12B6CF로 전면 변경 */
 
     --bg: #F5FAFC;
     --bg-light: #EAF5F8;
@@ -231,7 +231,6 @@ img {
     pointer-events: none;
 }
 
-/* PC: 왼쪽 제목과 오른쪽 사진을 분리 */
 .hero-layout {
     position: relative;
     z-index: 1;
@@ -240,14 +239,13 @@ img {
 
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    align-items: start; /* 상단 정렬로 변경하여 제목이 아래로 밀리지 않도록 수정 */
+    align-items: start;
     gap: 60px;
 
     padding-top: 70px;
     padding-bottom: 70px;
 }
 
-/* 왼쪽 콘텐츠 */
 .hero-layout .hero-content {
     position: relative;
     z-index: 2;
@@ -255,10 +253,9 @@ img {
     width: 100%;
     max-width: 620px;
     min-width: 0;
-    align-self: start; /* 상단 정렬로 고정 */
+    align-self: start;
 }
 
-/* 작은 상단 문구 */
 .eyebrow {
     margin-bottom: 22px;
 
@@ -270,7 +267,6 @@ img {
     text-transform: uppercase;
 }
 
-/* 메인 제목 */
 .hero h1 {
     margin-bottom: 26px;
 
@@ -288,7 +284,6 @@ img {
     color: var(--primary-dark);
 }
 
-/* 메인 설명 */
 .hero-description {
     max-width: 470px;
     margin-bottom: 32px;
@@ -300,7 +295,6 @@ img {
     word-break: keep-all;
 }
 
-/* 공약 살펴보기 버튼 */
 .primary-button {
     display: inline-flex;
     align-items: center;
@@ -327,18 +321,17 @@ img {
 
 .primary-button:hover {
     color: #FFFFFF;
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
 
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(18, 182, 207, 0.2);
+    box-shadow: 0 10px 30px rgba(18, 182, 207, 0.25);
 }
 
 .primary-button span {
     font-size: 18px;
 }
 
-/* 메인 영역 하단 표시 */
 .hero-bottom {
     display: flex;
     align-items: center;
@@ -364,7 +357,6 @@ img {
    4. 후보자 사진 및 소개문
 ======================================== */
 
-/* PC용 사진 영역 */
 .hero-layout .hero-visual-desktop {
     display: flex;
 }
@@ -383,7 +375,6 @@ img {
     gap: 20px;
 }
 
-/* 사진 */
 .hero-layout .hero-visual img {
     display: block;
 
@@ -397,7 +388,6 @@ img {
     border-radius: 18px;
 }
 
-/* 사진 아래 소개문 */
 .hero-photo-description {
     width: 100%;
     margin: 0;
@@ -414,7 +404,6 @@ img {
     overflow-wrap: break-word;
 }
 
-/* PC에서는 모바일용 사진 숨김 */
 .hero-layout .hero-content > .hero-visual {
     display: none;
 }
@@ -520,7 +509,6 @@ img {
     word-break: keep-all;
 }
 
-/* 공약 상세 설명 */
 .pledge-detail {
     padding-top: 12px;
 }
@@ -558,7 +546,6 @@ img {
     word-break: keep-all;
 }
 
-/* 공약 기대 효과 박스 */
 .detail-box {
     display: flex;
     align-items: flex-start;
@@ -676,7 +663,7 @@ img {
     color: var(--primary-dark);
     background: transparent;
 
-    border: 1px solid rgba(8, 127, 149, 0.4);
+    border: 1px solid rgba(18, 182, 207, 0.4);
     border-radius: 9px;
 
     font-size: 13px;
@@ -778,7 +765,6 @@ img {
         width: calc(100% - 40px);
     }
 
-    /* 네비게이션 */
     .navbar {
         min-height: 70px;
         gap: 12px;
@@ -820,7 +806,6 @@ img {
         border-bottom: 1px solid var(--border);
     }
 
-    /* JS의 open 클래스와 active 클래스 모두 지원 */
     .nav-menu.open,
     .nav-menu.active {
         display: flex;
@@ -836,7 +821,6 @@ img {
         border-bottom: none;
     }
 
-    /* 메인 영역 */
     .hero {
         min-height: auto;
         display: block;
@@ -889,12 +873,10 @@ img {
         line-height: 1.9;
     }
 
-    /* PC용 사진 숨김 */
     .hero-layout .hero-visual-desktop {
         display: none;
     }
 
-    /* 모바일용 사진 */
     .hero-layout .hero-content > .hero-visual {
         display: flex;
 
@@ -944,7 +926,6 @@ img {
         margin-top: 35px;
     }
 
-    /* 공약 안내 띠 */
     .intro-strip-inner {
         min-height: 82px;
         gap: 15px;
@@ -960,7 +941,6 @@ img {
         text-align: right;
     }
 
-    /* 공약 영역 */
     .pledge-section {
         padding: 75px 0;
     }
@@ -1032,7 +1012,6 @@ img {
         font-size: 13px;
     }
 
-    /* 마지막 메시지 */
     .closing-section {
         padding: 85px 0;
     }
@@ -1058,7 +1037,6 @@ img {
         font-size: 12px;
     }
 
-    /* 푸터 */
     .footer-inner {
         min-height: 65px;
         font-size: 10px;
