@@ -3,10 +3,10 @@
 ======================================== */
 
 :root {
-    --primary: #12B6CF;        /* 공약 번호 01~04 및 메인 시그니처 색상 */
+    --primary: #087F95;        /* 공약 번호 01~04 및 메인 시그니처 색상 */
     --primary-light: #65D9E8;
     --primary-hover: #066678;
-    --primary-dark: #12B6CF;   /* 메인 텍스트 및 강조 버튼 색상 */
+    --primary-dark: #087F95;   /* 메인 텍스트 및 강조 버튼 색상 */
 
     --bg: #F5FAFC;
     --bg-light: #EAF5F8;
@@ -404,6 +404,15 @@ img {
     overflow-wrap: break-word;
 }
 
+/* 두 번째 사진처럼 각 문단을 명확히 구분하는 하단 여백 설정 */
+.hero-photo-description p {
+    margin-bottom: 24px;
+}
+
+.hero-photo-description p:last-child {
+    margin-bottom: 0;
+}
+
 .hero-layout .hero-content > .hero-visual {
     display: none;
 }
@@ -742,6 +751,10 @@ img {
         font-size: 14px;
     }
 
+    .hero-photo-description p {
+        margin-bottom: 20px;
+    }
+
     .pledge-grid {
         gap: 55px;
     }
@@ -914,6 +927,10 @@ img {
         word-break: keep-all;
     }
 
+    .hero-photo-description p {
+        margin-bottom: 18px;
+    }
+
     .hero-layout .primary-button {
         min-height: 50px;
         padding: 0 20px;
@@ -1083,6 +1100,10 @@ img {
     .hero-photo-description {
         font-size: 12px;
         line-height: 1.85;
+    }
+
+    .hero-photo-description p {
+        margin-bottom: 16px;
     }
 
     .pledge-section {
