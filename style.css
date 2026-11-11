@@ -3,10 +3,10 @@
 ======================================== */
 
 :root {
-    --primary: #087F95;        /* 공약 번호 01~04 및 메인 시그니처 색상 */
+    --primary: #12B6CF;        /* 공약 번호 01~04 및 메인 시그니처 색상 */
     --primary-light: #65D9E8;
     --primary-hover: #066678;
-    --primary-dark: #087F95;   /* 메인 텍스트 및 강조 버튼 색상 */
+    --primary-dark: #12B6CF;   /* 메인 텍스트 및 강조 버튼 색상 */
 
     --bg: #F5FAFC;
     --bg-light: #EAF5F8;
