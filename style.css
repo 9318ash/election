@@ -1390,3 +1390,41 @@ body {
     }
 }
 
+/* HERO 제목과 사진 위치 수정 */
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin-top: 0;
+    max-width: 650px;
+}
+
+.hero-visual-desktop {
+    min-width: 0;
+    position: relative;
+}
+
+/* 모바일 화면 */
+@media (max-width: 768px) {
+    .hero-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .hero-content h1 {
+        max-width: 100%;
+    }
+}
+
