@@ -1,4 +1,3 @@
-
 const menuToggle = document.querySelector("#menuToggle");
 const navMenu = document.querySelector("#navMenu");
 const navLinks = document.querySelectorAll(".nav-link");
